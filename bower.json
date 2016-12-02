@@ -1,0 +1,26 @@
+{
+  "name": "krumb",
+  "version": "0.0.0",
+  "description": "Filter only owned entity properties.",
+  "main": "krumb.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "filter",
+    "own",
+    "enumerable",
+    "property",
+    "entity",
+    "krumb"
+  ],
+  "homepage": "https://github.com/volkovasystems/krumb",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
