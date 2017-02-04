@@ -1,8 +1,8 @@
 {
   "name": "krumb",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Filter only owned entity properties.",
-  "main": "krumb.js",
+  "main": "krumb.deploy.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
   ],
