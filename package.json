@@ -1,13 +1,13 @@
 {
   "name": "krumb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Filter only owned entity properties.",
   "main": "krumb.js",
   "support": "krumb.support.js",
   "deploy": "krumb.deploy.js",
   "browser": "krumb.deploy.js",
   "scripts": {
-    "build": "babel krumb.js -o krumb.support.js && webpack",
+    "build": "babel krumb.js --out-file krumb.support.js --source-maps && webpack --progress --display-modules",
     "test": "mocha krumb-test.js"
   },
   "repository": {
@@ -23,18 +23,21 @@
     "krumb"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/krumb/issues"
   },
   "homepage": "https://github.com/volkovasystems/krumb#readme",
   "dependencies": {
-    "babel-runtime": "^6.22.0"
+    "babel-runtime": "^6.23.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-core": "^6.22.1",
-    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.22.0",
     "source-map-loader": "^0.1.6",
     "webpack": "^2.2.1"
