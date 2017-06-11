@@ -60,20 +60,16 @@ const krumb = function krumb( entity ){
 		@end-meta-configuration
 	*/
 
-	let object = { };
-
 	try{
-		Object.getOwnPropertyNames( entity )
-			.filter( ( property ) => {
-				return Object.getOwnPropertyDescriptor( entity, property ).enumerable;
-			} )
-			.forEach( ( property ) => { object[ property ] = entity[ property ]; } );
+		return Object.keys( entity ).reduce( ( object, property ) => {
+			object[ property ] = entity[ property ];
+
+			return object;
+		}, { } );
 
 	}catch( error ){
-		object = { };
+		return { };
 	}
-
-	return object;
 };
 
 module.exports = krumb;

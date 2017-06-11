@@ -49,7 +49,7 @@
               
               		This will return the object's owned enumerable properties.
               	@end-module-documentation
-              */var _getOwnPropertyDescriptor = require("babel-runtime/core-js/object/get-own-property-descriptor");var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _keys = require("babel-runtime/core-js/object/keys");var _keys2 = _interopRequireDefault(_keys);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var krumb = function krumb(entity) {
 	/*;
@@ -60,20 +60,16 @@ var krumb = function krumb(entity) {
                                     	@end-meta-configuration
                                     */
 
-	var object = {};
-
 	try {
-		(0, _getOwnPropertyNames2.default)(entity).
-		filter(function (property) {
-			return (0, _getOwnPropertyDescriptor2.default)(entity, property).enumerable;
-		}).
-		forEach(function (property) {object[property] = entity[property];});
+		return (0, _keys2.default)(entity).reduce(function (object, property) {
+			object[property] = entity[property];
+
+			return object;
+		}, {});
 
 	} catch (error) {
-		object = {};
+		return {};
 	}
-
-	return object;
 };
 
 module.exports = krumb;
