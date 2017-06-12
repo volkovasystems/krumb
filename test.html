@@ -1,8 +1,27 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script
-			type="application/javascript"
-			src="./krumb.deploy.js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>krumb QUnit test</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+	<script type="application/javascript" src="./krumb.deploy.js"></script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script>
+		QUnit.test( "equal test", function( assert ) {
+
+			assert.deepEqual( krumb( { "name": "simple" } ), { "name": "simple" }, "should be equal" );
+
+			assert.deepEqual( krumb( { } ), { }, "should be equal" );
+
+		} );
 		</script>
-	</head>
+</body>
+
 </html>
