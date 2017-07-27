@@ -1,28 +1,29 @@
 {
-  "name": "krumb",
-  "version": "0.5.0",
-  "description": "Filter only owned entity properties.",
-  "main": "krumb.deploy.js",
-  "support": "krumb.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "filter",
-    "own",
-    "enumerable",
-    "property",
-    "entity",
-    "krumb"
-  ],
-  "homepage": "https://github.com/volkovasystems/krumb",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+	"name": "krumb",
+	"version": "0.6.0",
+	"description": "Filter only owned entity properties.",
+	"main": "krumb.deploy.js",
+	"support": "krumb.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"filter",
+		"own",
+		"enumerable",
+		"property",
+		"entity",
+		"krumb"
+	],
+	"homepage": "https://github.com/volkovasystems/krumb",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
