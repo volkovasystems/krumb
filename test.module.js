@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "krumb", ( ) => {
-	
+
 	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
@@ -84,7 +84,7 @@ describe( "krumb", ( ) => {
 	describe( `"krumb( { } )"`, ( ) => {
 		it( "should be equal to { }" , ( ) => {
 
-			assert.deepEqual( krumb( { } ), { });
+			assert.deepEqual( krumb( { } ), { } );
 
 		} );
 	} );
@@ -94,10 +94,10 @@ describe( "krumb", ( ) => {
 //: @end-server
 
 
-//: @client: 
+//: @client:
 
 describe( "krumb", ( ) => {
-	
+
 	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
@@ -124,28 +124,40 @@ describe( "krumb", ( ) => {
 
 describe( "krumb", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
+	describe( `"krumb( { "name": "simple" } )"`, ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
-		assert.equal(krumb ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return krumb( { "name": "simple" } );
+				}
+
+			).value;
+
+			assert.deepEqual( result, { "name": "simple" } );
 
 		} );
 	} );
 
 	describe( `"krumb( { } )"`, ( ) => {
-		it( "should be equal to { }" , ( ) => {
+		it( "should be equal to { }", ( ) => {
 
-		assert.equal(krumb ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return krumb( { } );
+				}
+
+			).value;
+
+			assert.deepEqual( result, { } );
 
 		} );
 	} );
-	
+
 } );
 
 //: @end-bridge
-
