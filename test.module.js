@@ -142,6 +142,7 @@ describe( "krumb", ( ) => {
 		} );
 	} );
 
+
 	describe( `"krumb( { } )"`, ( ) => {
 		it( "should be equal to { }", ( ) => {
 
