@@ -68,7 +68,7 @@ const krumb = require( "./krumb.js" );
 //: @server:
 
 describe( "krumb", ( ) => {
-	
+
 	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
@@ -80,7 +80,7 @@ describe( "krumb", ( ) => {
 	describe( `"krumb( { } )"`, ( ) => {
 		it( "should be equal to { }" , ( ) => {
 
-			assert.deepEqual( krumb( { } ), { });
+			assert.deepEqual( krumb( { } ), { } );
 
 		} );
 	} );
@@ -88,7 +88,6 @@ describe( "krumb", ( ) => {
 
 
 //: @end-server
-
 
 
 

@@ -5,15 +5,15 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-31T12:28:42.450Z",
-    "end": "2017-07-31T12:28:42.456Z",
-    "duration": 6
+    "start": "2017-08-18T01:34:28.635Z",
+    "end": "2017-08-18T01:34:28.647Z",
+    "duration": 12
   },
   "tests": [
     {
       "title": "should be equal to { 'name': 'simple' }",
       "fullTitle": "krumb \"krumb( { \"name\": \"simple\" } ),\" should be equal to { 'name': 'simple' }",
-      "duration": 1,
+      "duration": 3,
       "currentRetry": 0,
       "err": {}
     },
@@ -31,7 +31,7 @@
     {
       "title": "should be equal to { 'name': 'simple' }",
       "fullTitle": "krumb \"krumb( { \"name\": \"simple\" } ),\" should be equal to { 'name': 'simple' }",
-      "duration": 1,
+      "duration": 3,
       "currentRetry": 0,
       "err": {}
     },
