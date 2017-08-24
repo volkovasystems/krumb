@@ -69,7 +69,7 @@ const krumb = require( "./krumb.js" );
 
 describe( "krumb", ( ) => {
 
-	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
+	describe( "`krumb( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
 			assert.deepEqual( krumb( { "name": "simple" } ), { "name": "simple" } );
@@ -77,13 +77,14 @@ describe( "krumb", ( ) => {
 		} );
 	} );
 
-	describe( `"krumb( { } )"`, ( ) => {
+	describe( "`krumb( { } )`", ( ) => {
 		it( "should be equal to { }" , ( ) => {
 
 			assert.deepEqual( krumb( { } ), { } );
 
 		} );
 	} );
+
 } );
 
 

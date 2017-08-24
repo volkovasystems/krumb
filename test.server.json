@@ -1,46 +1,46 @@
 {
-  "stats": {
-    "suites": 3,
-    "tests": 2,
-    "passes": 2,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-18T01:34:28.635Z",
-    "end": "2017-08-18T01:34:28.647Z",
-    "duration": 12
-  },
-  "tests": [
-    {
-      "title": "should be equal to { 'name': 'simple' }",
-      "fullTitle": "krumb \"krumb( { \"name\": \"simple\" } ),\" should be equal to { 'name': 'simple' }",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to { }",
-      "fullTitle": "krumb \"krumb( { } )\" should be equal to { }",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should be equal to { 'name': 'simple' }",
-      "fullTitle": "krumb \"krumb( { \"name\": \"simple\" } ),\" should be equal to { 'name': 'simple' }",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to { }",
-      "fullTitle": "krumb \"krumb( { } )\" should be equal to { }",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-24T05:09:01.316Z",
+		"end": "2017-08-24T05:09:01.322Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should be equal to { 'name': 'simple' }",
+			"fullTitle": "krumb `krumb( { 'name': 'simple' } )` should be equal to { 'name': 'simple' }",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to { }",
+			"fullTitle": "krumb `krumb( { } )` should be equal to { }",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to { 'name': 'simple' }",
+			"fullTitle": "krumb `krumb( { 'name': 'simple' } )` should be equal to { 'name': 'simple' }",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to { }",
+			"fullTitle": "krumb `krumb( { } )` should be equal to { }",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-24T05:09:02.523Z",
+	"end": "2017-08-24T05:09:45.649Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "krumb",
+			"duration": 0,
+			"start": "2017-08-24T05:09:45.351Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "krumb",
+			"duration": 121,
+			"start": "2017-08-24T05:09:45.351Z",
+			"end": "2017-08-24T05:09:45.472Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-24T05:09:45.353Z",
+					"end": "2017-08-24T05:09:45.353Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "krumb",
+					"associatedTest": "should be equal to { 'name': 'simple' }"
+				},
+				{
+					"start": "2017-08-24T05:09:45.433Z",
+					"end": "2017-08-24T05:09:45.433Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "krumb",
+					"associatedTest": "should be equal to { 'name': 'simple' }"
+				},
+				{
+					"start": "2017-08-24T05:09:45.434Z",
+					"end": "2017-08-24T05:09:45.435Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "krumb",
+					"associatedTest": "should be equal to { }"
+				},
+				{
+					"start": "2017-08-24T05:09:45.471Z",
+					"end": "2017-08-24T05:09:45.472Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "krumb",
+					"associatedTest": "should be equal to { }"
+				},
+				{
+					"start": "2017-08-24T05:09:45.472Z",
+					"end": "2017-08-24T05:09:45.473Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "krumb"
+				}
+			]
+		},
+		{
+			"name": "`krumb( { 'name': 'simple' } )`",
+			"duration": 82,
+			"start": "2017-08-24T05:09:45.352Z",
+			"end": "2017-08-24T05:09:45.434Z",
+			"tests": [
+				{
+					"name": "should be equal to { 'name': 'simple' }",
+					"start": "2017-08-24T05:09:45.352Z",
+					"end": "2017-08-24T05:09:45.432Z",
+					"duration": 80,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`krumb( { } )`",
+			"duration": 38,
+			"start": "2017-08-24T05:09:45.434Z",
+			"end": "2017-08-24T05:09:45.472Z",
+			"tests": [
+				{
+					"name": "should be equal to { }",
+					"start": "2017-08-24T05:09:45.434Z",
+					"end": "2017-08-24T05:09:45.471Z",
+					"duration": 37,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
