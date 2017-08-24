@@ -73,7 +73,7 @@ const path = require( "path" );
 
 describe( "krumb", ( ) => {
 
-	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
+	describe( "`krumb( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
 			assert.deepEqual( krumb( { "name": "simple" } ), { "name": "simple" } );
@@ -81,13 +81,14 @@ describe( "krumb", ( ) => {
 		} );
 	} );
 
-	describe( `"krumb( { } )"`, ( ) => {
+	describe( "`krumb( { } )`", ( ) => {
 		it( "should be equal to { }" , ( ) => {
 
 			assert.deepEqual( krumb( { } ), { } );
 
 		} );
 	} );
+
 } );
 
 
@@ -98,7 +99,7 @@ describe( "krumb", ( ) => {
 
 describe( "krumb", ( ) => {
 
-	describe( `"krumb( { "name": "simple" } ),"`, ( ) => {
+	describe( "`krumb( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
 
 			assert.deepEqual( krumb( { "name": "simple" } ), { "name": "simple" } );
@@ -106,16 +107,15 @@ describe( "krumb", ( ) => {
 		} );
 	} );
 
-	describe( `"krumb( { } )"`, ( ) => {
+	describe( "`krumb( { } )`", ( ) => {
 		it( "should be equal to { }" , ( ) => {
 
-			assert.deepEqual( krumb( { } ), { });
+			assert.deepEqual( krumb( { } ), { } );
 
 		} );
 	} );
+
 } );
-
-
 
 //: @end-client
 
@@ -126,35 +126,36 @@ describe( "krumb", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"krumb( { "name": "simple" } )"`, ( ) => {
+	describe( "`krumb( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to { 'name': 'simple' }", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-					return krumb( { "name": "simple" } );
+					return JSON.stringify( krumb( { "name": "simple" } ) );
 				}
 
 			).value;
+			//: @end-ignore
 
-			assert.deepEqual( result, { "name": "simple" } );
+			assert.deepEqual( JSON.parse( result ), { "name": "simple" } );
 
 		} );
 	} );
 
-
-	describe( `"krumb( { } )"`, ( ) => {
-		it( "should be equal to { }", ( ) => {
-
+	describe( "`krumb( { } )`", ( ) => {
+		it( "should be equal to { }" , ( ) => {
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-					return krumb( { } );
+					return JSON.stringify( krumb( { } ) );
 				}
 
 			).value;
+			//: @end-ignore
 
-			assert.deepEqual( result, { } );
+			assert.deepEqual( JSON.parse( result ), { } );
 
 		} );
 	} );
